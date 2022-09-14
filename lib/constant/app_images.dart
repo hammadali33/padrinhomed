@@ -1,0 +1,1 @@
+const kSplashIcon='assets/images/splash_icon.png';
