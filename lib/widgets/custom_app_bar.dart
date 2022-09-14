@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:padrinhomed/constant/color.dart';
 import 'package:padrinhomed/widgets/my_text.dart';
 
-Widget customAppBar() {
+Widget customBackButton(onTap) {
   return TextButton.icon(
-    onPressed: () => Get.back,
+    onPressed: onTap,
     icon: const Icon(
       Icons.arrow_back_ios,
       size: 16,
