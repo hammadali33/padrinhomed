@@ -22,18 +22,19 @@ class MyButton extends StatelessWidget {
       width: Get.width,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(28),
-        color: buttonStatus ? kSecondaryColor : kLightGreyColor,
+        color: buttonStatus ? kSecondaryColor : kPrimaryColor.withOpacity(0.3),
       ),
       child: Material(
         color: Colors.transparent,
         child: InkWell(
           splashColor: kPrimaryColor.withOpacity(0.1),
           highlightColor: kPrimaryColor.withOpacity(0.1),
+          borderRadius: BorderRadius.circular(24),
           onTap: onTap,
           child: Center(
             child: MyText(
               text: buttonText,
-              textColor: buttonStatus ? kPrimaryColor : kDarkGreyColor,
+              textColor: kPrimaryColor,
               fontSize: 18,
               fontWeight: FontWeight.w700,
             ),

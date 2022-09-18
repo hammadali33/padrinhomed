@@ -4,13 +4,14 @@ import 'package:padrinhomed/constant/color.dart';
 class MyTextField extends StatefulWidget {
   String? labelText, hintText;
   bool haveSuffixIcon, isPassword;
-  Widget? counter;
+  Widget? counter,suffix;
 
   MyTextField({
     super.key,
     this.labelText,
     this.hintText,
     this.counter,
+    this.suffix,
     this.haveSuffixIcon = false,
     this.isPassword = false,
   });
@@ -31,6 +32,7 @@ class _MyTextFieldState extends State<MyTextField> {
         fontSize: 18,
         fontWeight: FontWeight.w700,
       ),
+
       decoration: InputDecoration(
         suffixIcon: widget.haveSuffixIcon
             ? IconButton(
@@ -44,7 +46,8 @@ class _MyTextFieldState extends State<MyTextField> {
                   color: kBlackColor,
                 ),
               )
-            : const SizedBox(),
+            : widget.suffix,
+
         labelText: widget.labelText,
         hintText: widget.hintText,
         hintStyle: const TextStyle(

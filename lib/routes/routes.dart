@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
+import 'package:padrinhomed/view/intro/intro_screen/intro_screen.dart';
 import 'package:padrinhomed/view/loading/loading.dart';
-import 'package:padrinhomed/view/splash_screen.dart';
-import 'package:padrinhomed/view/stepper_screen/stepper_screen.dart';
+import 'package:padrinhomed/view/intro/splash_screen.dart';
 import 'package:padrinhomed/view/user/login.dart';
 
 class Routes {
@@ -16,7 +16,7 @@ class Routes {
     ),
     GetPage(
       name: AppLink.stepperScreen,
-      page: () => const StepperScreen(),
+      page: () => const IntroScreen(),
     ), GetPage(
       name: AppLink.loading,
       page: () => const Loading(),
